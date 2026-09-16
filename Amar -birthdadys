@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Amar ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080308;
+    color:white;
+    font-family:Poppins,sans-serif;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+    radial-gradient(circle at 20% 10%,rgba(255,70,170,.15),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(255,130,200,.10),transparent 30%),
+    #080308;
+}
+
+body:after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+
+    background-image:
+    radial-gradient(#fff 1px,transparent 1px);
+
+    background-size:90px 90px;
+    opacity:.10;
+}
+
+
+/* FLOATING HEARTS */
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:20;
+}
+
+.heart{
+    position:absolute;
+    bottom:-30px;
+    color:#ff69b4;
+    animation:floatHeart linear infinite;
+    opacity:0;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        transform:translateY(0) scale(.5);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:translateY(-110vh) scale(1.3) rotate(25deg);
+        opacity:0;
+    }
+
+}
+
+
+/* PASSWORD SCREEN */
+
+#lockScreen{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:
+    radial-gradient(circle at center,#300d27,#080308 65%);
+}
+
+.lockBox{
+
+    width:min(500px,92vw);
+
+    padding:45px 28px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,110,185,.55);
+
+    border-radius:30px;
+
+    background:rgba(12,3,10,.85);
+
+    box-shadow:
+    0 0 70px rgba(255,60,170,.20);
+}
+
+.smallTitle{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#dcb6cc;
+}
+
+.lockBox h1{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:75px;
+
+    font-style:italic;
+
+    margin:18px 0;
+
+}
+
+.pink{
+    color:#ff72b9;
+}
+
+.lockBox p{
+
+    color:#d5bdcc;
+
+    line-height:1.8;
+
+    font-size:14px;
+}
+
+.lockIcon{
+
+    width:82px;
+    height:82px;
+
+    margin:25px auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #ff72b9;
+
+    border-radius:50%;
+
+    font-size:32px;
+
+    box-shadow:0 0 30px rgba(255,70,170,.3);
+}
+
+.password{
+
+    width:min(350px,100%);
+
+    padding:15px 20px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,110,185,.55);
+
+    background:#140710;
+
+    color:white;
+
+    outline:none;
+
+    text-align:center;
+}
+
+.openBtn{
+
+    margin-top:15px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    background:linear-gradient(90deg,#e33b91,#ff81bf);
+
+    box-shadow:0 10px 30px rgba(255,50,150,.25);
+}
+
+#error{
+
+    color:#ff8fc6;
+
+    margin-top:10px;
+
+    font-size:12px;
+}
+
+
+/* WEBSITE */
+
+#website{
+    display:none;
+}
+
+
+/* MUSIC */
+
+.musicButton{
+
+    position:fixed;
+
+    right:15px;
+    top:15px;
+
+    z-index:30;
+
+    border:1px solid rgba(255,120,190,.55);
+
+    background:rgba(15,4,12,.85);
+
+    color:#ffd9eb;
+
+    border-radius:25px;
+
+    padding:10px 16px;
+
+    cursor:pointer;
+}
+
+
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+}
+
+.heroBox{
+
+    width:min(1100px,96vw);
+
+    min-height:720px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:35px;
+
+    border:1px solid rgba(255,120,190,.5);
+
+    box-shadow:
+    0 0 70px rgba(255,60,160,.13);
+}
+
+.heroImage{
+
+    position:absolute;
+
+    inset:0;
+}
+
+.heroImage img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+}
+
+.heroBox:after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(5,2,5,.92),
+        rgba(5,2,5,.55),
+        rgba(5,2,5,.08)
+    ),
+    linear-gradient(
+        0deg,
+        rgba(5,2,5,.8),
+        transparent
+    );
+}
+
+.heroContent{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(570px,90%);
+
+    padding:55px;
+}
+
+.heroContent h2{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:100px;
+
+    line-height:.78;
+
+    margin:20px 0;
+
+}
+
+.heroContent h2 span{
+
+    color:#ff78bb;
+
+    font-style:italic;
+}
+
+.heroContent p{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:24px;
+
+    line-height:1.5;
+
+    color:#ffe5f1;
+}
+
+.scroll{
+
+    margin-top:45px;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    color:#d4b5c5;
+}
+
+.scroll span{
+
+    display:block;
+
+    font-size:28px;
+
+    margin-top:10px;
+}
+
+
+/* SECTIONS */
+
+section{
+
+    width:min(1050px,92vw);
+
+    margin:auto;
+
+    padding:80px 0;
+}
+
+.eyebrow{
+
+    text-align:center;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    color:#cba8bb;
+}
+
+.title{
+
+    text-align:center;
+
+    font-family:"Cormorant Garamond";
+
+    font-size:68px;
+
+    margin:12px 0 40px;
+}
+
+.title span{
+
+    color:#ff76b9;
+
+    font-style:italic;
+}
+
+
+/* COUNTDOWN */
+
+.countdown{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:14px;
+}
+
+.time{
+
+    text-align:center;
+
+    padding:25px 10px;
+
+    border:1px solid rgba(255,120,190,.45);
+
+    border-radius:20px;
+
+    background:rgba(20,6,16,.72);
+}
+
+.time strong{
+
+    display:block;
+
+    font-family:"Cormorant Garamond";
+
+    font-size:45px;
+
+    color:#ffe0ef;
+}
+
+.time small{
+
+    color:#bda5b5;
+}
+
+.until{
+
+    text-align:center;
+
+    color:#bea5b5;
+
+    margin-top:20px;
+}
+
+.until span{
+
+    color:#ff8ac4;
+}
+
+
+/* FEATURE */
+
+.feature{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:20px;
+}
+
+.featureImage{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,120,190,.4);
+}
+
+.featureImage img{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:470px;
+
+    object-fit:cover;
+}
+
+.featureText{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:40px;
+
+    border:1px solid rgba(255,120,190,.4);
+
+    border-radius:25px;
+
+    background:rgba(20,6,16,.7);
+}
+
+.featureText p{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:32px;
+
+    line-height:1.35;
+
+    font-style:italic;
+
+    color:#ffe5f1;
+}
+
+
+/* GALLERY */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+}
+
+.photoCard{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,120,190,.4);
+}
+
+.photoCard img{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+}
+
+.photoCard:hover img{
+
+    transform:scale(1.06);
+}
+
+.caption{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:40px 10px 15px;
+
+    text-align:center;
+
+    font-family:"Cormorant Garamond";
+
+    font-size:23px;
+
+    font-style:italic;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+}
+
+
+/* LETTER */
+
+.letter{
+
+    max-width:800px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border:1px solid rgba(255,120,190,.45);
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(35,8,25,.85),
+        rgba(10,3,8,.8)
+    );
+}
+
+.letter p{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:21px;
+
+    line-height:1.8;
+
+    color:#e5cedb;
+
+    margin-bottom:18px;
+}
+
+.signature{
+
+    text-align:right;
+
+    font-family:"Great Vibes";
+
+    font-size:34px;
+
+    color:#ff8cc4;
+}
+
+
+/* GIFT */
+
+.giftSection{
+
+    text-align:center;
+}
+
+.gift{
+
+    display:inline-block;
+
+    font-size:125px;
+
+    cursor:pointer;
+
+    filter:drop-shadow(
+        0 0 30px rgba(255,70,170,.4)
+    );
+
+    transition:.3s;
+}
+
+.gift:hover{
+
+    transform:scale(1.08) rotate(-2deg);
+}
+
+.giftMessage{
+
+    display:none;
+
+    max-width:700px;
+
+    margin:20px auto;
+
+    padding:30px;
+
+    border:1px solid rgba(255,120,190,.5);
+
+    border-radius:25px;
+
+    background:rgba(20,6,16,.9);
+}
+
+.giftMessage h3{
+
+    font-family:"Great Vibes";
+
+    font-size:45px;
+
+    color:#ff91c7;
+
+    margin-bottom:15px;
+}
+
+.giftMessage p{
+
+    color:#dbc5d2;
+
+    line-height:1.8;
+}
+
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:60px 20px 80px;
+
+    color:#9e8494;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+}
+
+.footerLove{
+
+    font-family:"Great Vibes";
+
+    font-size:38px;
+
+    color:#ff7cbd;
+
+    margin-top:15px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    .heroBox{
+
+        min-height:720px;
+    }
+
+    .heroContent{
+
+        padding:35px;
+    }
+
+    .heroContent h2{
+
+        font-size:65px;
+    }
+
+    .heroContent p{
+
+        font-size:20px;
+    }
+
+    .countdown{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature{
+
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .title{
+
+        font-size:52px;
+    }
+}
+
+@media(max-width:450px){
+
+    .gallery{
+
+        grid-template-columns:1fr;
+    }
+
+    .heroContent h2{
+
+        font-size:58px;
+    }
+
+    .letter{
+
+        padding:28px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- FLOATING HEARTS -->
+
+<div class="hearts" id="hearts"></div>
+
+
+<!-- PASSWORD -->
+
+<div id="lockScreen">
+
+    <div class="lockBox">
+
+        <div class="smallTitle">
+            A SECRET BIRTHDAY SURPRISE
+        </div>
+
+        <h1>
+            For <span class="pink">Amar</span> ♡
+        </h1>
+
+        <p>
+            A little surprise made especially
+            for the person who owns my heart. ❤️
+        </p>
+
+        <div class="lockIcon">
+            🔐
+        </div>
+
+        <input
+            id="password"
+            class="password"
+            type="password"
+            placeholder="Enter secret password"
+        >
+
+        <br>
+
+        <button
+            class="openBtn"
+            onclick="unlock()"
+        >
+            Open My Surprise 💌
+        </button>
+
+        <div id="error"></div>
+
+        <div style="
+        margin-top:10px;
+        font-size:11px;
+        color:#806b79;
+        ">
+            Hint: his name ♡
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- WEBSITE -->
+
+<div id="website">
+
+
+<button
+class="musicButton"
+onclick="musicToggle()"
+>
+♫ Music
+</button>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="heroBox">
+
+        <div class="heroImage">
+
+            <img
+            src="memory-1.jpg"
+            alt="Our beautiful memory"
+            >
+
+        </div>
+
+
+        <div class="heroContent">
+
+            <div class="smallTitle">
+                TODAY IS ALL ABOUT YOU
+            </div>
+
+            <h2>
+
+                Happy
+                <br>
+
+                <span>Birthday</span>
+
+                <br>
+
+                Amar ♡
+
+            </h2>
+
+            <p>
+
+                To the person who makes
+                my ordinary days feel
+                a little more beautiful. ✨
+
+            </p>
+
+            <div class="scroll">
+
+                SCROLL TO DISCOVER
+
+                <span>↓</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- COUNTDOWN -->
+
+<section>
+
+    <div class="eyebrow">
+        A SPECIAL MOMENT
+    </div>
+
+    <h2 class="title">
+        Birthday
+        <span>Countdown</span>
+        ♡
+    </h2>
+
+
+    <div class="countdown">
+
+        <div class="time">
+            <strong id="days">00</strong>
+            <small>Days</small>
+        </div>
+
+        <div class="time">
+            <strong id="hours">00</strong>
+            <small>Hours</small>
+        </div>
+
+        <div class="time">
+            <strong id="minutes">00</strong>
+            <small>Minutes</small>
+        </div>
+
+        <div class="time">
+            <strong id
